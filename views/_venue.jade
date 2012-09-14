@@ -1,0 +1,23 @@
+mixin venue(full)
+    div.venue 
+        div.map
+            img(src="/images/map.png")
+            p
+                | The Mobile Summit will be held at 
+                a(href="http://terrasf.com/") The Terra Gallery
+            p.mid 511 Harrison St, San Francisco, CA 94105
+        img.terra(src="/images/terra.jpg")
+        if full
+            each data, info_type in venue_info
+                .infoSec
+                    a(name=info_type)
+                    img(src="/images/#{info_type}.png")
+                    .info 
+                        .infoTitle= data.title
+                        .infoDesc !{data['desc']}
+        else
+            .actions
+                each data, file in venue_info
+                    a.action(href="/venue\##{file}")
+                        img(src="/images/#{file}.png")
+                        div= data.title

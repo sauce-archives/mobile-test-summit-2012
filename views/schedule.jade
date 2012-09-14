@@ -1,0 +1,40 @@
+extends layout
+
+block content
+    mixin h1("Schedule")
+    .schedule 
+        .block
+            .time 9:00 A.M. - 4:30 P.M.
+            img.icon(src="/images/schedule-session.png")
+            .event
+                .desc Morning Sessions
+                .topic Topic 1 on Mobile Testing
+                .speakerList Jane Doe, Google
+                .bio 
+                    | Bio on Jane Doe lorem ipsumsum dolor sit amet,
+                    | consectetur adipisicing elit....
+                .topic Topic 2 on Mobile Testing
+                .speakerList Jane Doe, John Doe, Jane Doe
+                .topic Topic 3 on Mobile Testing
+                .speakerList Jane Doe, John Doe
+        .block
+            .time NOON - 1:00 P.M.
+            img.icon(src="/images/schedule-food.png")
+            .event
+                .desc Lunch
+                .speakerList Details on Lunch
+        .block
+            .time 9:00 A.M. - 4:30 P.M.
+            img.icon(src="/images/schedule-session.png")
+            .event
+                .desc Afternoon Sessions
+                .topic Topic 4 on Mobile Testing
+                .speakerList Jane Doe, John Doe
+                .topic Topic 5 on Mobile Testing
+                .speakerList Jane Doe, John Doe
+        .block
+            .time 6 P.M. Onwards
+            img.icon(src="/images/schedule-party.png")
+            .event
+                .desc Party
+                .topic Connect and be merry!

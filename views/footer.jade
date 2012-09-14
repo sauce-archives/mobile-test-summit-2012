@@ -1,0 +1,9 @@
+footer
+    #footerTop
+        tags = ["LEARN", "CONNECT", "PARTICIPATE"]
+        for tag in tags
+            .footerTag #{tag}
+            img(src="/images/bigdots.png")
+        a.footerTag(href=register_url) REGISTER NOW
+    #footerBottom
+        include _menubar

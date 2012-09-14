@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    mixin h1("Why We're Gathering")
+    div.whyWeGather
+        img(src="/images/connections.png", align="left")
+        h2 Mobile is the future
+        p
+            | ...So we decided to bring together project leaders in the mobile
+            | automated testing space for a 1 day, community-driven event. We
+            | hope it sparks new ideas, inspires cohesion around a standard set of
+            | mobile automated testing tools, and lays the groundwork for future
+            | conversations in this space. Join us!  
+    
+    mixin h1("Organizers")
+    div.organizers
+        each data, organizer in organizers 
+            .organizer 
+                img(src="/images/organizer-#{organizer}.png")
+                .name= data.name
+                .projects
+                    div= data.company
+                .bio !{data.bio}

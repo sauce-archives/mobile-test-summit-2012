@@ -1,0 +1,49 @@
+extends layout
+include _venue
+
+block content
+    mixin h1("Speakers")
+    div.speakers 
+        img(src="/images/prev-on.png", style="visibility:hidden;position:absolute;")
+        img(src="/images/next-on.png", style="visibility:hidden;position:absolute;")
+        .speakerLeft
+            &nbsp;
+            a(href="javascript:void(0);", style="display:none") 
+                img(src="/images/prev-off.png")
+        .speakerStripCont
+            .speakerStrip
+                each speaker_id in speaker_ids
+                    - data = speakers[speaker_id]
+                    - speaker = speaker_id
+                    .speaker 
+                        a.speakerImg(href="/speakers\##{speaker}")
+                            img(src="/images/speaker-#{speaker}.png")
+                        a.name(href="/speakers\##{speaker}")= data.name
+                        .projects
+                            each project in data.projects
+                                div= project
+        .speakerRight
+            a(href="javascript:void(0);")
+                img(src="/images/next-off.png")
+            &nbsp;
+    mixin h1("Join the Conversation")
+    div.whatYouGet
+        img(src="/images/before-after.png", align="left")
+        .info
+            | We're bringing together the best minds in mobile testing to 
+            | talk automation and what comes next.
+            br 
+            br 
+            | Learn about the open source tools available for mobile automation; the key challenges each is trying to solve;  
+            | and how you can implement them in your own setup.
+    mixin h1("Venue")
+    mixin venue(false)
+    mixin h1("Sponsors")
+    div.sponsors 
+        each data, sponsor in sponsors
+            if sponsor == "workday"
+                - klass = "last"
+            else
+                - klass = ""
+            a(href="/sponsors\##{sponsor}", class=klass)
+                img(src="/images/logo-#{sponsor}.png")

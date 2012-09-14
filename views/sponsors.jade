@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    mixin h1("Sponsors")
+    .sponsorPage
+        each data, sponsor in sponsors 
+            .sponsorSec
+                a(name=sponsor)
+                .sponsorImgSec
+                    img(src="/images/logo-#{sponsor}-color.png")
+                .sponsorDetail
+                    .sponsorTitle= data.name
+                    .sponsorDesc !{data.info}
+        .sponsorSec
+            .sponsorImgSec
+                img(src="/images/sponsors-more.png")
+            .sponsorDetail
+                .sponsorTitle
+                    a(href="/mobile-testing-summit-sponsorship.pdf") Support the Summit!
+                .sponsorDesc
+                    | We have a few sponsorship opportunities left for companies interested in supporting this event. Being involved is a great way to highlight your involvement in the mobile testing space and connect with developers and test engineers who are building and testing mobile apps. Click the above link for more info or email&nbsp;
+                    a(href="mailto:ashley@saucelabs.com") ashley@saucelabs.com 
+                    span. 
