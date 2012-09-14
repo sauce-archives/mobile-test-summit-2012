@@ -1,7 +1,7 @@
 Mobile Test Summit 2012 Website
 =======================
 
-Mobile Test Summit 2012 Conference Website. Live at
+Live at
 [http://mobiletestsummit.com](mobiletestsummit.com). Built in Node/Express,
 Coffeescript, Stylus, Jade, and Mocha!
 
