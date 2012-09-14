@@ -7,8 +7,11 @@ browser = webdriver.remote(
   , process.env.SAUCE_ACCESS_KEY
 )
 
+#browser = webdriver.remote()
+
 REMOTE_HOST = 'http://localhost'
 REMOTE_PORT = process.env.PORT or 8080
+BASE_URL = "#{REMOTE_HOST}:#{REMOTE_PORT}/"
 
 desired =
   browserName: 'iphone'
@@ -16,21 +19,33 @@ desired =
   platform: 'Mac 10.6'
   name: "Mobile Summit selenium test"
 
+#desired =
+  #browserName: 'chrome'
+
 describe "Selenium Tests: ", ->
-  before (done) ->
+  beforeEach (done) ->
     @timeout(90000)
     browser.init desired, ->
-      browser.get 'http://localhost:8080', ->
         done()
 
   describe "Title", ->
     it "should be what I want", (done) ->
       @timeout(10000)
-      browser.title (err, title) ->
-        assert.equal title, "Mobile Testing Summit 2012"
-        done()
+      browser.get BASE_URL, ->
+        browser.title (err, title) ->
+          assert.equal title, "Mobile Testing Summit 2012"
+          done()
 
-  after (done) ->
+  for view in ['about', 'schedule', 'speakers', 'sponsors', 'venue']
+    describe "#{view} page", ->
+      it "should render", (done) ->
+        @timeout(10000)
+        browser.get "#{BASE_URL}#{view}", ->
+          browser.title (err, title) ->
+            assert.equal title, "Mobile Testing Summit 2012"
+            done()
+
+  afterEach (done) ->
     @timeout(10000)
     browser.quit ->
       done()
