@@ -162,6 +162,7 @@ open source web testing tool.  Since 2011, Jason has been building
 robots to play Angry Birds on mobile devices -- the project has been
 featured in Popular Science magazine, NBCNews.com, O'Reilly Radar, and
 Hackaday."""
+        abstract: """"""
     luke:
         name: "Luke Inman-Semerau"
         projects: ["Salesforce", "iPhone Driver"]

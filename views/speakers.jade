@@ -1,18 +1,28 @@
 extends layout
 
+mixin speaker_sec(speaker, data)
+    .speakerSec
+        img(src="/images/speaker-#{speaker}.png")
+        .speakerInfo
+            a(name="#{speaker}", class="speakerAnchor") &nbsp;
+            .name= data.name
+            .projects
+                each project in data.projects
+                    div= project 
+            h3 Abstract
+            .abstract !{data['abstract']}
+            h3 Bio
+            .bio !{data['bio']}
+
 block content
+    mixin h1("Keynotes")
+    each speaker in speaker_ids
+        - data = speakers[speaker]
+        if data.keynote 
+            mixin speaker_sec(speaker, data)
     mixin h1("Speakers")
     each speaker in speaker_ids
         - data = speakers[speaker]
-        .speakerSec
-            img(src="/images/speaker-#{speaker}.png")
-            .speakerInfo
-                a(name="#{speaker}", class="speakerAnchor") &nbsp;
-                .name= data.name
-                .projects
-                    each project in data.projects
-                        div= project 
-                h3 Abstract
-                .abstract !{data['abstract']}
-                h3 Bio
-                .bio !{data['bio']}
+        if !data.keynote
+            mixin speaker_sec(speaker, data)
+        
