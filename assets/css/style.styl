@@ -484,7 +484,7 @@ footer {
     .speakerStripCont {
         width: $strip_w;
         position: relative;
-        height: 275px;
+        height: 280px;
         overflow: hidden;
         float: left;
         margin: 20px 0px;
@@ -506,7 +506,7 @@ footer {
 
         a.speakerImg {
             display: block;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             img {
                 width: $speaker_w;
             }
@@ -519,7 +519,7 @@ footer {
             &:hover {
                 color: $blue;
             }
-            margin: 10px 0px;
+            margin: 5px 0px;
         }
 
         div.name {
@@ -529,11 +529,16 @@ footer {
             }
         }
 
-        .projects {
+        .projects, .keynote {
             font-size: 18px;
             color: $blue;
             text-transform: uppercase;
             line-height: 1em;
+        }
+
+        .keynote {
+            bebas: 18px $blue;
+            font-weight: bold;
         }
 
         .bio {

@@ -18,6 +18,8 @@ block content
                     .speaker 
                         a.speakerImg(href="/speakers\##{speaker}")
                             img(src="/images/speaker-#{speaker}.png")
+                        if data.keynote
+                            .keynote Keynote Speaker
                         a.name(href="/speakers\##{speaker}")= data.name
                         .projects
                             each project in data.projects

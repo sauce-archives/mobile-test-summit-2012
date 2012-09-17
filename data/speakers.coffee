@@ -151,6 +151,7 @@ Sun, test automation framework for PayPal financial systems as well as
 performance, security and automated test infrastructure in Intuit."""
     jason:
         name: "Jason Huggins"
+        keynote: true
         projects: ["Sauce Labs", "Selenium"]
         bio: """Jason is co-founder and CTO at Sauce Labs, where the focus is on
 testing infrastructure as a service for software developers. Before
@@ -247,8 +248,14 @@ speaker_ids_sorted.push(id) for id, obj of speakers
 speaker_ids_sorted.sort (a, b) ->
     a_names = speakers[a]['name'].split " "
     b_names = speakers[b]['name'].split " "
+    a_only_keynote = speakers[a].keynote? and not speakers[b].keynote?
+    b_only_keynote = speakers[b].keynote? and not speakers[a].keynote?
     a_last_name = a_names[0]
     b_last_name = b_names[0]
+    if a_only_keynote
+        return -1
+    if b_only_keynote
+        return +1
     return -1 if a_last_name < b_last_name
     return +1 if a_last_name > b_last_name
     return 0
