@@ -1,4 +1,14 @@
 module.exports =
+    ebay:
+        name: "ebay"
+        info: """With more than 100 million active users globally (as of Q4 2011), eBay
+is the world's largest online marketplace, where practically anyone
+can buy and sell practically anything. Founded in 1995, eBay connects
+a diverse and passionate community of individual buyers and sellers,
+as well as small businesses. Their collective impact on ecommerce is
+staggering: In 2011, the total value of goods sold on eBay was $68.6
+billion -- more than $2,100 every second. For the latest stories about
+eBay, including recent financial performance, visit our News Room."""
     fb:
         name: "Facebook"
         info: """Founded in 2004, <a href="http://facebook.com">Facebook's</a> mission is to make the world more open and connected. People use Facebook to stay connected with friends and family, to discover what's going on in the world, and to share and express what matters to them."""
