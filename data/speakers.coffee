@@ -152,7 +152,7 @@ performance, security and automated test infrastructure in Intuit."""
     jason:
         name: "Jason Huggins"
         keynote: true
-        projects: ["Sauce Labs", "Selenium"]
+        projects: ["Sauce Labs"]
         bio: """Jason is co-founder and CTO at Sauce Labs, where the focus is on
 testing infrastructure as a service for software developers. Before
 Sauce, Jason was an engineer at Google where he supported the Selenium
