@@ -9,8 +9,9 @@ mixin speaker_sec(speaker, data)
             .projects
                 each project in data.projects
                     div= project 
-            h3 Abstract
-            .abstract !{data['abstract']}
+            if data.abstract
+                h3 Abstract
+                .abstract !{data['abstract']}
             h3 Bio
             .bio !{data['bio']}
 

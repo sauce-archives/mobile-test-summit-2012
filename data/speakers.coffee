@@ -162,7 +162,6 @@ open source web testing tool.  Since 2011, Jason has been building
 robots to play Angry Birds on mobile devices -- the project has been
 featured in Popular Science magazine, NBCNews.com, O'Reilly Radar, and
 Hackaday."""
-        abstract: """"""
     luke:
         name: "Luke Inman-Semerau"
         projects: ["Salesforce", "iPhone Driver"]
@@ -241,6 +240,30 @@ He is responsible for the Webdriver infrastructure for desktop and mobile
 testing at Facebook, and has recently been focusing on applying testing
 tools to mobile development. He¹ll be joined by other engineers in the
 tools group at Facebook working on mobile."""
+    ben:
+        name: "Ben Galbraith"
+        keynote: true
+        projects: ["Walmart.com"]
+        bio: """Ben Galbraith, together with his long-time friend Dion Almaer, forms one-half of the dynamic "Ben and Dion" duo that founded Ajaxian.com, headed Developer Tools at Mozilla, ran Developer Relations at Palm and is now running mobile architecture and engineering at Walmart.com after being acquired along with their start-up team in early 2011. Ben's been writing code since he was six and starting businesses since he was ten; he's written books, given hundreds of award-winning presentations world-wide, produced a few technical conferences, sold three companies, and has held CEO, CIO, CTO, and Software Architect positions in the medical, publishing, media, consumer electronics, advertising, software and internet industries. He lives in Palo Alto with his wife and six children."""
+    dion:
+        name: "Dion Almaer"
+        keynote: true
+        projects: ["Walmart.com"]
+        bio: """Dion Almaer is a technologist who loves to code and build. He and his
+long time partner-in-crime Ben Galbraith recently brought their team
+to Walmart to power the mobile engineering efforts. He enjoys sharing
+his passion for software production across various communities,
+including a new property called FunctionSource.com.<br/>
+<br/>
+Dion has been writing Web applications since it took over from Gopher.
+He has been fortunate enough to speak around the world, has published
+many articles, a book, and of course covers life the universe and
+everything on his blog at <a
+href="http://almaer.com/blog/">almaer.com/blog</a>.<br/>
+<br/>
+He has been called a human aggregator, and you can see that in full
+force if you follow him on Twitter <a
+href="http://twitter.com/dalmaer">@dalmaer</a>."""
 
 
 speaker_ids_sorted = []
