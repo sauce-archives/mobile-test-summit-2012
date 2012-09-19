@@ -128,7 +128,7 @@ thousands of people set up a dev environment on their Mac.<br/>
 Find out more on <a href="http://about.me/moncef">http://about.me/moncef</a>"""
     dan:
         name: "Dan Cuellar"
-        projects: ["Zoosk", "iOS-Auto"]
+        projects: ["Zoosk", "applecart"]
         abstract: """If you are attending this conference, you know there exists no real good solution for automating native iPhone applications. Apple's supported javascript automation solution leaves a lot to be desired and lives in a sandbox which forces you to use it only in isolation where your hands and feet are bound, preventing you from doing anything worthwhile. However, after a week of pulling my hair out, I found a way to get UIAuto out of sandbox and integrated with existing more powerful tools. I will share the journey of creating a SeleniumRC server like component which allows programmers to use the reliability constructs of Apple's UIAutomation outside the sandbox."""
         bio: """Think of Dan as Cupid's life coach and personal trainer. He currently manages the test team at Zoosk, evaluating the cupid's latest forays into the world of online dating. Whether it is mega-flirting, sharing your love-life over social networks, or just reading online personals, Dan and his team ensure that Cupid's arsenal is military grade before it is used on the public. Previously, he worked at Microsoft in the Microsoft Office Division and completed a BS in Computer Science at Carnegie Mellon University."""
     eing:
