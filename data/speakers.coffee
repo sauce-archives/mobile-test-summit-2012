@@ -165,9 +165,16 @@ Hackaday."""
     luke:
         name: "Luke Inman-Semerau"
         projects: ["Salesforce", "iPhone Driver"]
-        abstract: """Getting going testing web pages in iOS:
-Starting out with the source of course. Building, Running, Locating elements, Limitations, Known Issues, Debugging the iOS code and finally future thinking of where WebDriver on iOS may go."""
-        bio: """Web Developer for the past 10 years focusing on UI with a current focus on test automation for responsive design web pages. Started using Selenium-WebDriver in early 2011 and after receiving some very helpful support on IRC decided to hang around the chat room and mailing lists helping others. After submitting a few patches to SeHQ, was nominated and accepted to commit to the Selenium project. Nearly 300 commits later to SeHQ, Java and Python bindings, Atoms and now the defacto owner of the iPhoneDriver."""
+        abstract: """This talk will center around getting started automating the 
+web in iOS. We will explore how to: discover the source, build, run and locate elements. 
+Takeaways will be current iOS limitations, known issues as well as debugging the iPhoneDriver code."""
+        bio: """Luke Inman-Semerau is a software developer turned test automator 
+for San Francisco based Salesforce.com.  After over 10 years of wide ranging projects 
+in the tech industry Luke has amassed a unique perspective regarding web technologies.  
+His experience in JavaScript, Java, Python, and Obj-C created the perfect combination of 
+skills leading him to become a Selenium committer. Over the last 18 months he has worked 
+on the SeleniumHQ docs and the iPhoneDriver. In his spare time, wait, what spare time? He 
+doesn't have spare time because he has two daughters 1 and 3 years old."""
     francois:
         name: "François Reynaud"
         projects: ["eBay", "iOS Driver for Native Apps"]
