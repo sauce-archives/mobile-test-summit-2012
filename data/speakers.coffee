@@ -111,7 +111,7 @@ Clojure, Gherkin (even taking on sysadm duties)—whatever it takes to
 make it work."""
     moncef:
         name: "Moncef Belyamani"
-        projects: ["AOL"]
+        projects: ["Code For America Fellow"]
         abstract: """Moncef Belyamani will provide a brief overview of the various mobile
 automation tools that he's had the opportunity to evaluate, and why he
 chose Calabash. He'll then go over the challenges he faced while
