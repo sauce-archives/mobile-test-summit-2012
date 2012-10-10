@@ -11,7 +11,21 @@ billion -- more than $2,100 every second. For the latest stories about
 eBay, including recent financial performance, visit our News Room."""
     fb:
         name: "Facebook"
-        info: """Founded in 2004, <a href="http://facebook.com">Facebook's</a> mission is to make the world more open and connected. People use Facebook to stay connected with friends and family, to discover what's going on in the world, and to share and express what matters to them."""
+        info: """Founded in 2004, <a href="http://facebook.com">Facebook's</a>
+            mission is to make the world more open and connected. People use
+            Facebook to stay connected with friends and family, to discover
+            what's going on in the world, and to share and express what matters
+            to them."""
+    lookout:
+        name: "Lookout"
+        info: """Lookout is a mobile security company dedicated to making the mobile
+experience safe for everyone. Lookout delivers award-winning protection
+from the growing threats facing mobile users today, including malware,
+phishing, privacy violations, data loss, and loss of the phone itself.
+Cross-platform, Lookout is designed from the ground up to provide advanced
+mobile protection while remaining lightweight and efficient on the phone.
+Lookout is the world leader in smartphone security with 25 million users
+across 400 mobile networks in 170 countries"""
     salesforce:
         name: "Salesforce"
         info: """<a href="http://salesforce.com">Salesforce.com</a> is the enterprise cloud computing company that is
