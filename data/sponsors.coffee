@@ -1,4 +1,15 @@
 module.exports =
+    cloudbees:
+        name: "CloudBees"
+        info: """At CloudBees, we believe the cloud is the new platform. Our vision is
+to free developers from infrastructure maintenance duties so they can
+focus 100% on developing great applications. The CloudBees Platform as
+a Service (PaaS) supports the complete Java application lifecycle for
+cloud development and deployment, without any servers, any virtual
+machines or IT staff. Our platform includes DEV@cloud, a service that
+lets developers take their build and test environments to the cloud
+using Jenkins CI, and RUN@cloud, which lets teams seamlessly deploy
+applications to production in the cloud. Try it free!"""
     ebay:
         name: "ebay"
         info: """With more than 100 million active users globally (as of Q4 2011), eBay
