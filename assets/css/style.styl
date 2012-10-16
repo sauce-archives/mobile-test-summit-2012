@@ -147,7 +147,7 @@ p.mid {
     header {
         background-color: #008DC2;
         position: relative;
-        height: 486px;
+        height: 420px;
 
         #headerBg {
             position: absolute;
@@ -192,8 +192,8 @@ p.mid {
             position: absolute;
             display: block;
             text-decoration: none;
-            top: 167px;
-            left: 768px;
+            top: 100px;
+            left: 700px;
             padding-top: 47px;
             padding-bottom: 42px;
             bebas: 40px #fff;
@@ -224,7 +224,7 @@ p.mid {
 
         .menuBar {
             position: absolute;
-            top: 436px;
+            top: 399px;
         }
 
     }
@@ -607,18 +607,19 @@ footer {
 .schedule {
     $schedule_w = 700px;
     margin-left: 75px;
+    $time_w = 233px;
+    $icon_w = 33px;
+    $icon_m = 10px;
+    $desc_w = $schedule_w - $time_w - $icon_w - $icon_m;
 
-    .block {
+    .block, .smallBlock {
         clear()
-        margin-bottom: 20px;
-        $time_w = 203px;
-        $icon_w = 33px;
-        $icon_m = 10px;
-        $desc_w = $schedule_w - $time_w - $icon_w - $icon_m;
+        margin-bottom: 10px;
+        padding-top: 20px;
 
         .time {
             float: left;
-            bebas: $f_big*1.15 $text_c;
+            bebas: $f_large $blue;
             width: $time_w;
         }
 
@@ -645,13 +646,38 @@ footer {
                 margin-top: 15px;
             }
 
-            .speakerList {
-                color: $green;
+            .details {
+                color: $blue;
                 font-size: $f_normal;
                 text-transform: uppercase;
                 margin-bottom: 8px;
             }
 
+        }
+    }
+
+    .smallBlock {
+        padding-top: 0px;
+        margin-bottom: 3px;
+        .time {
+            bebas: $f_big $text_c;
+            width: $time_w + $icon_w - 15px;
+            margin-left: 15px;
+        }
+
+        .event {
+            width: ($desc_w - $icon_w - $icon_m);
+            abel: $f_big*0.9 $text_c;
+            margin-left: 10px;
+
+            a {
+                color: $text_c;
+                text-decoration: none;
+            }
+
+            span.project {
+                color: $blue;
+            }
         }
     }
 }

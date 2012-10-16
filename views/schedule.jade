@@ -1,40 +1,79 @@
 extends layout
 
+mixin speaker(start, end, id, name, proj)
+    .smallBlock
+        .time #{start} - #{end}
+        .event
+            a(href="/speakers/##{id}") #{name},&nbsp;
+            span.project #{proj}
+
+
 block content
     mixin h1("Schedule")
     .schedule 
         .block
-            .time 9:00 A.M. - 4:30 P.M.
+            .time 8:00 A.M. - 9:00 A.M.
+            img.icon(src="/images/schedule-ticket.png")
+            .event
+                .desc Registration
+        .smallBlock
+            .time 9:00 A.M. - 9:30 A.M.
+            .event Opening keynote by Dion Almaer &amp; Ben Galbraith
+        .block
+            .time &nbsp;
             img.icon(src="/images/schedule-session.png")
             .event
                 .desc Morning Sessions
-                .topic Topic 1 on Mobile Testing
-                .speakerList Jane Doe, Google
-                .bio 
-                    | Bio on Jane Doe lorem ipsumsum dolor sit amet,
-                    | consectetur adipisicing elit....
-                .topic Topic 2 on Mobile Testing
-                .speakerList Jane Doe, John Doe, Jane Doe
-                .topic Topic 3 on Mobile Testing
-                .speakerList Jane Doe, John Doe
+        mixin speaker("9:35 A.M.", "10:00 A.M.", 'tom', "Tom Yeh", "Sikuli")
+        mixin speaker("10:05 A.M.", "10:30 A.M.", 'pete', "Pete Hodgson", "Frank")
+        mixin speaker("10:35 A.M.", "11:00 A.M.", 'malini', "Malini Das", "Firefox OS")
+        .block
+            .time 11 A.M. - 11:25 A.M.
+            img.icon(src="/images/schedule-coffee.png")
+            .event
+                .desc Break
+                .details Coffee, Conversation, Stretching
+        mixin speaker("11:25 A.M.", "11:50 A.M.", 'francois', "Francois Reynaud", "iOS Driver for Native")
+        mixin speaker("11:55 A.M.", "12:20 P.M.", 'eing', "Eing Ong", "Moet")
+        mixin speaker("12:25 P.M.", "12:50 P.M.", 'luke', "Luke Inman-Serau", "iPhoneDriver")
         .block
             .time NOON - 1:00 P.M.
             img.icon(src="/images/schedule-food.png")
             .event
                 .desc Lunch
-                .speakerList Details on Lunch
+                .topic 
+                    | Catering by San Francisco favorite Bi-Rite Market &amp; made
+                    | possible by sponsorship from Walmart Labs
         .block
-            .time 9:00 A.M. - 4:30 P.M.
+            .time &nbsp;
             img.icon(src="/images/schedule-session.png")
             .event
                 .desc Afternoon Sessions
-                .topic Topic 4 on Mobile Testing
-                .speakerList Jane Doe, John Doe
-                .topic Topic 5 on Mobile Testing
-                .speakerList Jane Doe, John Doe
+        mixin speaker("2:00 P.M.", "2:25 P.M.", 'karl', "Karl Krukow &amp; Jonas Larsen", "Calabash")
+        mixin speaker("2:30 P.M.", "2:55 P.M.", 'moncef', "Moncef Belyani", "Experience Report")
+        mixin speaker("3:00 P.M.", "3:25 P.M.", 'dan', "Dan Cuellar", "Applecart")
         .block
-            .time 6 P.M. Onwards
-            img.icon(src="/images/schedule-party.png")
+            .time 3:25 P.M. - 3:50 P.M.
+            img.icon(src="/images/schedule-coffee.png")
             .event
-                .desc Party
-                .topic Connect and be merry!
+                .desc Break
+                .details More Coffee, Conversation, Stretching
+        mixin speaker("3:55 P.M.", "4:20 P.M.", 'brad', "Brad Grzesiak", "Bwoken")
+        mixin speaker("4:25 P.M.", "4:50 P.M.", 'william', "William Lachance", "Orangutan")
+        mixin speaker("4:55 P.M.", "5:20 P.M.", 'damien', "Damien Sereni", "Facebook Experience Report")
+        .smallBlock
+            .time 5:25 P.M. - 5:55 P.M.
+            .event Lightning Talks
+        .smallBlock
+            .time 6:00 P.M. - 6:30 P.M.
+            .event Closing keynote by Jason Huggins
+        .block 
+            .time 6 P.M. Onwards 
+            img.icon(src="/images/schedule-party.png")
+            .event 
+                .desc Party 
+                .topic 
+                    | Join us at Local Kitchen &amp; Wine Merchant for some
+                    | post-conference fun. Dinner and drinks will be sponsored
+                    | by Lookout, Inc and Facebook, respectively. Don't miss
+                    | it!
