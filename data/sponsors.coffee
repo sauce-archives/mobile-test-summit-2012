@@ -1,4 +1,7 @@
 module.exports =
+    cisimple:
+        name: "cisimple"
+        info: """cisimple is a Continuous Integration platform for iOS and Android.  Every time a developer commits new code we automatically recompile and test their application .  Tight integration with Github means setup takes minutes instead of days and TestFlight support makes beta distribution a non-event."""
     cloudbees:
         name: "CloudBees"
         info: """At CloudBees, we believe the cloud is the new platform. Our vision is
