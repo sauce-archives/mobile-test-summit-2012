@@ -15,8 +15,8 @@ BASE_URL = "#{REMOTE_HOST}:#{REMOTE_PORT}/"
 
 desired =
   browserName: 'iphone'
-  version: '5.0'
-  platform: 'Mac 10.6'
+  version: '6.0'
+  platform: 'Mac 10.8'
   name: "Mobile Summit selenium test"
 
 #desired =
@@ -30,7 +30,7 @@ describe "Selenium Tests: ", ->
 
   describe "Title", ->
     it "should be what I want", (done) ->
-      @timeout(10000)
+      @timeout(20000)
       browser.get BASE_URL, ->
         browser.title (err, title) ->
           assert.equal title, "Mobile Testing Summit 2012"
@@ -39,14 +39,14 @@ describe "Selenium Tests: ", ->
   for view in ['about', 'schedule', 'speakers', 'sponsors', 'venue']
     describe "#{view} page", ->
       it "should render", (done) ->
-        @timeout(10000)
+        @timeout(20000)
         browser.get "#{BASE_URL}#{view}", ->
           browser.title (err, title) ->
             assert.equal title, "Mobile Testing Summit 2012"
             done()
 
   afterEach (done) ->
-    @timeout(10000)
+    @timeout(20000)
     browser.quit ->
       done()
 
