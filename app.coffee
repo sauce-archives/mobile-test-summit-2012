@@ -10,6 +10,18 @@ venue_info = require './data/venue.coffee'
 sponsors = require './data/sponsors.coffee'
 
 # set up assets and static files
+ensure_www = (req, res, next) ->
+    host = req.header 'host'
+    if host == "mobiletestsummit.com"
+        res.writeHead(301, {
+            'Location': "http://www.#{host}#{req.url}",
+            'Expires': (new Date).toGMTString()
+        })
+        res.end()
+    else
+        next()
+
+app.use ensure_www
 app.use assets()
 app.use express.static(__dirname + '/public')
 app.use express.errorHandler()
